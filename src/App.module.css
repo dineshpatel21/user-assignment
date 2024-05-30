@@ -6,6 +6,10 @@
 color: green;
 }
 
+.heading{
+  text-align: center;
+}
+
 table {
     width: 800px;
     height: 200px;
@@ -17,6 +21,7 @@ table {
   th {
     border-bottom: 1px solid black;
     border: 2px solid black;
+    padding: 5px;
   }
   
   td {
@@ -33,7 +38,7 @@ table {
     z-index: 20;
     border-radius: 6px;
     background-color:white;
-    top: 50%;
+    top: 40%;
     left: -11vw;
   }
 

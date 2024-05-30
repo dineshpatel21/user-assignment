@@ -2,39 +2,35 @@ import React, { useState, useEffect } from "react";
 import styles from "./App.module.css";
 
 export default function App() {
-  // 1 blue
-  // 2 red
-  // 3 yellow
-  // 4 green
-  // 5 white
-
-  // loop
-
+ 
   const [clickCount, setClickCount] = useState(0);
   const [userData, setUserData] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
-  const changeThemeColor = (clickCount) => {
-    switch (clickCount) {
-      case 1:
-        document.body.style.backgroundColor = "blue";
-        break;
-      case 2:
-        document.body.style.backgroundColor = "red";
-        break;
-      case 3:
-        document.body.style.backgroundColor = "yellow";
-        break;
-      case 4:
-        document.body.style.backgroundColor = "green";
-        break;
-      case 5:
-        document.body.style.backgroundColor = "white";
+  // const changeThemeColor = (clickCount) => {
+  //   switch (clickCount) {
+  //     case 1:
+  //       document.body.style.backgroundColor = "blue";
+  //       break;
+  //     case 2:
+  //       document.body.style.backgroundColor = "red";
+  //       break;
+  //     case 3:
+  //       document.body.style.backgroundColor = "yellow";
+  //       break;
+  //     case 4:
+  //       document.body.style.backgroundColor = "green";
+  //       break;
+  //     case 5:
+  //       document.body.style.backgroundColor = "white";
 
-        break;
-    }
-  };
-  // https://jsonplaceholder.typicode.com/users
+  //       break;
+  //   }
+  // };
+ 
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   const fetchData = async () => {
     await fetch("https://jsonplaceholder.typicode.com/users", {
@@ -59,12 +55,12 @@ export default function App() {
       });
   };
 
-  useEffect(() => {
-    changeThemeColor(clickCount);
-    if (clickCount > 5) {
-      setClickCount(1);
-    }
-  }, [clickCount]);
+  // useEffect(() => {
+  //   changeThemeColor(clickCount);
+  //   if (clickCount > 5) {
+  //     setClickCount(1);
+  //   }
+  // }, [clickCount]);
 
   const countClickCount = () => {
     setClickCount(clickCount + 1);
@@ -150,9 +146,11 @@ export default function App() {
 
   return (
     <div className={styles.container}>
-      <button onClick={fetchData}>fetch</button>
+      {/* <button onClick={fetchData}>fetch</button> */}
 
-      <table className={styles.table}>
+      <h2 className={styles.heading}>User Details</h2>
+
+      <table className={`${styles.table} ${styles.heading}`}>
         <tr>
           <th className={styles.th}>Name</th>
           <th className={styles.th}>Username</th>
