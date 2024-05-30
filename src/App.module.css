@@ -1,0 +1,44 @@
+.addressStyle:hover{
+  color:brown
+}
+
+.companyStyle:hover{
+color: green;
+}
+
+table {
+    width: 800px;
+    height: 200px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    
+  }
+  
+  th {
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+  }
+  
+  td {
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    position: relative;
+  }
+
+  .popup{
+    position: absolute;
+    width:150px;
+    border: 2px solid black;
+    z-index: 20;
+    border-radius: 6px;
+    background-color:white;
+    top: 50%;
+    left: -11vw;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
