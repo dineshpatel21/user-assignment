@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  
+  grid-template-areas:
+    "topbar topbar topbar topbar topbar topbar topbar"
+    "navbar homebar homebar homebar homebar leftbar leftbar"
+    "navbar homebar homebar homebar homebar leftbar leftbar";
+  gap: 30px;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+.topbar {
+  grid-area: topbar;
+}
+.homebar {
+  grid-area: homebar;
+}
+.leftbar {
+  grid-area: leftbar;
+}
